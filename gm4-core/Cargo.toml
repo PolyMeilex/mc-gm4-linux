@@ -1,0 +1,10 @@
+[package]
+name = "gm4-core"
+version = "0.1.0"
+authors = ["Poly <marynczak.bartlomiej@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rusb = "0.6.2"
+hexdump = "0.1.0"
+num_enum = "0.5.1"

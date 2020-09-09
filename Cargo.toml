@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "gm4-core",
+    "gm4-cli",
+    "gm4-gui"
+]
