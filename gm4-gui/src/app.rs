@@ -55,48 +55,48 @@ impl Widget for App {
         self.notebook
             .set_tab_label(self.effects_page.widget(), Some(&l2));
 
-        let pxb = gdk_pixbuf::PixbufLoader::new();
-        pxb.write(include_bytes!("../img/keys.png")).unwrap();
-        pxb.close().unwrap();
-        let pxb = pxb.get_pixbuf().unwrap();
+        // let pxb = gdk_pixbuf::PixbufLoader::new();
+        // pxb.write(include_bytes!("../img/keys.png")).unwrap();
+        // pxb.close().unwrap();
+        // let pxb = pxb.get_pixbuf().unwrap();
 
-        gtk::ImageBuilder::new()
-            .pixbuf(&pxb)
-            .parent(&self.test_box)
-            .build();
+        // gtk::ImageBuilder::new()
+        //     .pixbuf(&pxb)
+        //     .parent(&self.test_box)
+        //     .build();
 
-        let b = gtk::BoxBuilder::new()
-            .parent(&self.test_box)
-            .orientation(Vertical)
-            .margin_top(10)
-            .build();
+        // let b = gtk::BoxBuilder::new()
+        //     .parent(&self.test_box)
+        //     .orientation(Vertical)
+        //     .margin_top(10)
+        //     .build();
 
-        gtk::ButtonBuilder::new()
-            .label("Left button")
-            .parent(&b)
-            .build();
-        gtk::ButtonBuilder::new()
-            .label("Right button")
-            .parent(&b)
-            .build();
-        gtk::ButtonBuilder::new()
-            .label("Middle button")
-            .parent(&b)
-            .build();
-        gtk::ButtonBuilder::new().label("Back").parent(&b).build();
-        gtk::ButtonBuilder::new()
-            .label("Forward")
-            .parent(&b)
-            .build();
-        gtk::ButtonBuilder::new()
-            .label("DPI Loop")
-            .parent(&b)
-            .build();
+        // gtk::ButtonBuilder::new()
+        //     .label("Left button")
+        //     .parent(&b)
+        //     .build();
+        // gtk::ButtonBuilder::new()
+        //     .label("Right button")
+        //     .parent(&b)
+        //     .build();
+        // gtk::ButtonBuilder::new()
+        //     .label("Middle button")
+        //     .parent(&b)
+        //     .build();
+        // gtk::ButtonBuilder::new().label("Back").parent(&b).build();
+        // gtk::ButtonBuilder::new()
+        //     .label("Forward")
+        //     .parent(&b)
+        //     .build();
+        // gtk::ButtonBuilder::new()
+        //     .label("DPI Loop")
+        //     .parent(&b)
+        //     .build();
 
-        let l2 = gtk::Label::new(Some("Key Settings"));
-        self.notebook.set_tab_label(&self.test_box, Some(&l2));
+        // let l2 = gtk::Label::new(Some("Key Settings"));
+        // self.notebook.set_tab_label(&self.test_box, Some(&l2));
 
-        self.test_box.show_all();
+        // self.test_box.show_all();
     }
 
     fn model(_relm: &Relm<Self>, _: ()) -> Model {
@@ -178,11 +178,11 @@ impl Widget for App {
                     EffectsPage{
                         ConfigChanged(c) => Msg::EffectConfigChanged(c)
                     },
-                    #[name="test_box"]
-                    gtk::Box{
-                        margin_top: 10,
-                        orientation: Vertical,
-                    }
+                    // #[name="test_box"]
+                    // gtk::Box{
+                    //     margin_top: 10,
+                    //     orientation: Vertical,
+                    // }
                 },
                 gtk::Button{
                     label: "Save",
